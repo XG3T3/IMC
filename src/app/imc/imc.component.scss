@@ -1,8 +1,21 @@
 
-
 // *{
-//     margin: 0;
+    
 //     text-align: center;
+// }
+
+// #imc{
+
+    
+    
+// }
+
+// #imc + div{
+//     display: inline;
+//     width: 30%;
+//     text-align: center;
+//     padding: 3%;
+//     margin: auto;
 // }
 
 // input[type=radio]  + label{
@@ -14,9 +27,10 @@
 
 // }
 
-// p{
+// #imc p{
+//     font-size: 24px;
 //     display: inline-block;
-//     width: 45%;
+
 //     padding: 0 10%;
 // }
 
@@ -33,16 +47,20 @@
 
 
 
-// input[type=radio]:checked  + label>img{
-//     border:2px solid rgb(255, 0, 0);
-// }
+ input[type=radio]:checked  + label>img{
+     border:2px solid rgb(255, 0, 0);
+ }
 
 // .caja{
+//     display: inline-block;
 //     background-color: lightblue;
+//     width: 48%;
     
 // }
 
+
 // .caja > div{
-//     padding: 5% 0;
+//     display: block;
+//     padding: 1% 0%;
 // }
 
