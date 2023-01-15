@@ -1,53 +1,58 @@
-
-<div class="flex text-center justify-center bg-black" id="imc" >
-    <div  class="bg-red-200  w-1/4  ml-64 mt-40 pb-20 px-10 mb-20 rounded">
+<div class="flex text-center justify-center bg-black" id="imc">
+    <div class="bg-red-200  w-1/4  ml-64 mt-40 pb-20 px-10 mb-20 rounded">
         <div class="mt-10">
             <h1 class="text-3xl font-bold underline ">CALCULADORA IMC</h1>
             <div class=" my-5">
                 <h2 class="text-2xl font-bold ">Nombre</h2>
-                <input class="w-3/4 text-center"  type="text"  [(ngModel)]="nombre" >
+                <input class="w-3/4 text-center" type="text" [(ngModel)]="nombre">
             </div>
-            
+
             <div class="inline-block my-5 justify-between">
                 <h2 class="text-2xl font-bold ">Genero</h2>
                 <!-- <boton  source="https://farmacosalud.com/wp-content/uploads/2015/01/s%C3%ADmbolo-masculino-hombre-var%C3%B3n.jpg"></boton>
                 <boton  source="https://media.istockphoto.com/id/487306348/es/vector/icono-de-s%C3%ADmbolo-femenino.jpg?s=612x612&w=0&k=20&c=-d9Ir8OQMO2s9zBWMlFjwGOxJV7TkRJ06X2-eHi_a_M="></boton> -->
 
                 <div class="inline">
-                    
-                <input class="hidden " type="radio" name="genero" [(ngModel)]="genero" value="masculino" id="masculino" >
-                <label  for="masculino">
-                <img  class="w-1/4 inline"src="https://farmacosalud.com/wp-content/uploads/2015/01/s%C3%ADmbolo-masculino-hombre-var%C3%B3n.jpg" alt="">
-                </label>
+
+                    <input class="hidden " type="radio" name="genero" [(ngModel)]="genero" value="masculino"
+                        id="masculino">
+                    <label for="masculino">
+                        <img class="w-1/4 inline"
+                            src="../../assets/img/masculino.jpg"
+                            alt="">
+                    </label>
                 </div>
 
                 <div class="inline">
-                <input class="hidden " type="radio" name="genero" [(ngModel)]="genero" value="femenino" id="femenino">
-                <label  for="femenino"> 
-                    <img class="w-1/4 inline" src="https://media.istockphoto.com/id/487306348/es/vector/icono-de-s%C3%ADmbolo-femenino.jpg?s=612x612&w=0&k=20&c=-d9Ir8OQMO2s9zBWMlFjwGOxJV7TkRJ06X2-eHi_a_M=" alt=""> </label>
+                    <input class="hidden " type="radio" name="genero" [(ngModel)]="genero" value="femenino"
+                        id="femenino">
+                    <label for="femenino">
+                        <img class="w-1/4 inline"
+                        src="../../assets/img/femenino.jpg"
+                            alt=""> </label>
                 </div>
-            
+
             </div>
 
 
             <div>
 
 
-                
+
                 <div class="my-4">
                     <h2 class="text-2xl font-bold ">Peso</h2>
-                    <boton  texto='-' color="white" (mousedown)="restar()" (mouseup)="limpia()"></boton>
-                    <p class="w-2/6 text-2xl inline-block px-3 " for="">{{peso}} kg </p> 
-                    <boton  texto='+' color="white" (mousedown)="sumar()" (mouseup)="limpia()"></boton>
+                    <boton texto='-' color="white" (mousedown)="restar()" (mouseup)="limpia()"></boton>
+                    <p class="w-2/6 text-2xl inline-block px-3 " for="">{{peso}} kg </p>
+                    <boton texto='+' color="white" (mousedown)="sumar()" (mouseup)="limpia()"></boton>
                 </div>
 
 
-                
+
                 <div class="my-4">
                     <h2 class="w-2/6text-2xl font-bold ">Altura</h2>
-                    <boton  texto='-' color="white" (mousedown)="restaral()" (mouseup)="limpia()"></boton>
-                    <p class=" w-2/6 text-2xl inline-block px-3" for="">{{altura}} cm </p> 
-                    <boton  texto='+' color="white" (mousedown)="sumaral()" (mouseup)="limpia()"></boton>
+                    <boton texto='-' color="white" (mousedown)="restaral()" (mouseup)="limpia()"></boton>
+                    <p class=" w-2/6 text-2xl inline-block px-3" for="">{{altura}} cm </p>
+                    <boton texto='+' color="white" (mousedown)="sumaral()" (mouseup)="limpia()"></boton>
                 </div>
 
 
@@ -61,17 +66,19 @@
         <div class="mt-32">
             <boton (click)="calculo()" texto='v' color="green"></boton>
             <boton (click)="reset()" texto="X" color="red"></boton>
-    
+
         </div>
-        
-    
+
+
     </div>
 
 
 
-    <lista-resultados class="bg-red-200  w-1/4  ml-72 mt-40 pb-20 px-10 mb-20"  [lista]="resultados"></lista-resultados>
+    <lista-resultados class="bg-red-200  w-1/4 ml-72 mt-40 pb-20 px-10 mb-20"
+     [lista]="resultados">
+    </lista-resultados>
 
-<!-- <div class="caja">
+    <!-- <div class="caja">
         <h1>Resultados</h1>
         <div *ngFor="let resultao of resultados">
             <p>{{resultao.nombre}} {{resultao.mensaje}} </p>
